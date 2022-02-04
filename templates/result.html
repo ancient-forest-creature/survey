@@ -23,8 +23,9 @@
                 <lable>Program:</lable>
                 <h5 class="card-text ">{{session['program']}}</h5>
                 {% if 'stacks' in session%}
-                    {% for stack in stacks:%}
-                        <h5 class="card-text ">{{session['stack']}}</h5>
+                    <lable>Stacks:</lable>
+                    {% for stack in session['stacks']:%}
+                        <h5 class="card-text ">{{stack}}</h5>
                     {% endfor %}
                 {% endif %}
                 {% if 'comment' in session %}
