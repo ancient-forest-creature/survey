@@ -13,23 +13,23 @@
             <div class="card body bg-dark">
                 <h2 class="card-title text-warning">Survey Results</h2>
                 <lable>First Name:</lable>
-                <h6 class="card-text ">{{session['first_name']}}</h5>
+                <h5 class="card-text ">{{session['first_name']}}</h5>
                 <lable>Last Name:</lable>
-                <h6 class="card-text ">{{session['last_name']}}</h5>
+                <h5 class="card-text ">{{session['last_name']}}</h5>
                 <lable>DoJo Location:</lable>
-                <h6 class="card-text ">{{session['location']}}</h5>
+                <h5 class="card-text ">{{session['location']}}</h5>
                 <lable>Favorate Programming Language:</lable>
-                <h6 class="card-text ">{{session['lang']}}</h5>
+                <h5 class="card-text ">{{session['lang']}}</h5>
                 <lable>Program:</lable>
-                <h6 class="card-text ">{{session['program']}}</h5>
-                <!-- {% if stacks in session%}
+                <h5 class="card-text ">{{session['program']}}</h5>
+                {% if 'stacks' in session%}
                     {% for stack in stacks:%}
-                        <h5 class="card-text ">{{session['']}}</h5>
+                        <h5 class="card-text ">{{session['stack']}}</h5>
                     {% endfor %}
-                {% endif %} -->
-                {% if comment in session %}
-                <lable>Comment:</lable>    
-                <h5 class="card-text ">{{session['comment']}}</h5>
+                {% endif %}
+                {% if 'comment' in session %}
+                    <lable>Comment:</lable>    
+                    <h5 class="card-text ">{{session['comment']}}</h5>
                 {% endif %}
                 <a href="/reset" class="btn btn-warning mt-4">Home</a>
             </div>
